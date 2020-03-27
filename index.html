@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <section class="info" id="info">
+        <div style="position: absolute; left: 50px;">
+        <div class="info_elem" id="town_name_info" style="margin:50px 0 0 0">-</div>
+        <div class="info_elem" id="town_temp_info">-</div>
+        <div class="info_elem" id="town_wind_info">-</div>
+        <div class="info_elem" id="town_date_info">-</div>
+        <div class="info_elem" id="town_visual_info">-</div>
+        </div>
+        
+    </section>
+    <section class="container">
+        <div id="box" style="display:none"></div>
+        <div id="select_town" class="show"></div>
+            
+
+        </div>
+        <select name="country" onchange="state_scan()" class="selects" id="select_country">
+            
+        </select>
+        
+        <select name="state" class="selects" id="select_state"></select>
+        <input type="text" onchange="town_scan()" class="selects" name="" id="town_letters">
+        <select name="town" class="selects"  id="select_town_s"></select>
+        
+    
+        
+        <button id="country_check" onclick="set_weather()">ок</button>
+        
+
+        
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+    <script src="javascript.js"></script>
+    <script src="Show_info.js"></script>
+</body>
+</html>
