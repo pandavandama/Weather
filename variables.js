@@ -24,3 +24,7 @@ let img_bck = document.getElementById('img_bck');
 let info = document.getElementById('info');
 let your_gmt;
 let current_gmt;
+let info_elem = document.querySelector('.info_elem');
+
+let canvas=document.getElementById('canvas');
+let ctx = canvas.getContext('2d');

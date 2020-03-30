@@ -3,19 +3,60 @@ body{
     
     
 }
+a{
+
+    transition: all 0.6s ease;
+    margin: auto;
+    
+    top: -100px;
+    left: 0;
+    position: fixed;
+    text-decoration: none;
+    color: rgba(231, 223, 221, 1);
+    background: white;
+    font-size: 20px;
+    white-space: nowrap;
+    width: 20px;
+    text-align: center;
+    height: fit-content;
+    padding: 20px;
+    z-index: 1;
+    
+}
+
+.load{
+    background: rgba(231, 223, 221, 1);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+#load{
+    transition: all 0.6s ease;
+    background: url("load.gif") no-repeat center;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
 .container{
     
     margin: auto;
     position: fixed;
     width: 500px;
-    height: 400px;
-    left: 0;top: 10%;right: 0;bottom: 0;
-    background: white;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    height: 300px;
+    left: 0;right: 0;bottom: -500px;
+    background: rgba(231, 223, 221, 0.8);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 1);
     text-align: center;
+    transition: all 0.6s ease;
+    z-index: 2;
 }
+
 .selects{
-    margin: 40px 0 0 0;
+    outline: none;
+    background: rgba(231, 223, 221, 0.8);
+    margin: 20px 0 0 0;
     text-transform: uppercase;
     width: 100%;
     border: 0;
@@ -23,6 +64,10 @@ body{
     font-size: 20px;
     color: black;
     text-align-last: center;
+    color: white;
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
    
 }
 option{
@@ -31,11 +76,14 @@ option{
 }
 
 #country_check{
-    
+    color: white;
     border: 0;
     font-size: 40px;
     margin: 30px 0 0 0;
     padding: 10px 60px 10px 60px;
+    background: rgba(231, 223, 221, 1);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+
 }
 
 .town{
@@ -55,25 +103,50 @@ option{
     
 }
 .info{
-
-    
+    background: rgba(231, 223, 221, 1);
+    transition: all 0.6s ease;
     position: fixed;
     display: block;
-    width: 100%;
+    width: fit-content;
     height: 100%;
     border: 0;
     
     text-align: left;
     z-index: 0;
 }
+.infs{
+    position: fixed;
+    /* bottom: 0; */
+    left: 0;
+    right: 0;
+    top: -500px;
+    transition: all 0.6s ease;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+}
 .info_elem{
-    
+    width: fit-content;
     z-index: 100;
     display: block;
     position: relative;
     margin: 0 auto;
     font-weight: 600;
     font-family: 'Roboto Slab', serif;
-    font-size: 60px;
+    
     text-shadow: 0px 0px 10px white;
+}
+#canvas{
+    background:rgb(231, 223, 221);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    
+    
+
+}
+@media screen and (max-width:500px){
+.container{
+    width: 100%;
+}
 }

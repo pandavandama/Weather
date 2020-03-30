@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather</title>
     <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <img class="img_background" id="img_bck" src="https://images.wallpaperscraft.ru/image/pole_trava_oblaka_oblachno_119502_1920x1080.jpg" alt="" srcset="">
+    <div class="load"></div>
+    <img id="load"></img>
+    
+    <a id="serious" href="history.html">I</a>
     <section class="info" id="info">
-        <div style="position: absolute; left: 50px;">
-        <div class="info_elem" id="town_name_info" style="margin:50px 0 0 0">-</div>
-        <div class="info_elem" id="town_temp_info">-</div>
-        <div class="info_elem" id="town_wind_info">-</div>
-        <div class="info_elem" id="town_date_info">-</div>
-        <div class="info_elem" id="town_visual_info">-</div>
+        <div class="infs">
+        <div class="info_elem" id="town_name_info"></div>
+        <div class="info_elem" id="town_temp_info"></div>
+        <div class="info_elem" id="town_wind_info"></div>
+        <div class="info_elem" id="town_date_info"></div>
+        <div class="info_elem" id="town_visual_info"></div>
         </div>
-        
+        <canvas id="canvas"></canvas>
     </section>
+    
     <section class="container">
         
             
 
         </div>
-        <select name="country" onchange="state_scan()" class="selects" id="select_country">
-            
+        <select name="country" onchange="state_scan()" class="selects" id="select_country" >
+            <option selected disabled>Country</option>
         </select>
         
-        <select name="state" class="selects" id="select_state"></select>
-        <input type="text" onchange="town_scan()" class="selects" name="" id="town_letters">
-        <select name="town" class="selects"  id="select_town_s"></select>
+        <select name="state" class="selects" id="select_state">
+            <option selected disabled>State</option>
+        </select>
+        <input type="text" onchange="town_scan()" class="selects" name="" id="town_letters" placeholder="Find Town">
+        <select name="town" class="selects"  id="select_town_s">
+            <option selected disabled>Select Town</option>
+        </select>
         
     
         
@@ -45,6 +54,6 @@
     <script src="variables.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
     <script src="javascript.js"></script>
-    <script src="Show_info.js"></script>
+    <script src="canvas.js"></script>
 </body>
 </html>
