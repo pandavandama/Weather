@@ -47,3 +47,7 @@ canvas{
     margin: auto;
     z-index: 2;
 }
+.span_dark{
+    color: white;
+    background: 0;
+}
