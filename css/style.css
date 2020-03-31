@@ -3,6 +3,7 @@ body{
     font-family: 'Roboto Slab', serif;
     
 }
+
 a{
 
     transition: all 0.6s ease;
@@ -33,7 +34,7 @@ a{
 }
 #load{
     transition: all 0.6s ease;
-    background: url("load.gif") no-repeat center;
+    object-fit: none;
     z-index: 3;
     position: fixed;
     width: 100%;

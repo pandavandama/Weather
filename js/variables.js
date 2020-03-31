@@ -1,6 +1,6 @@
 let url = 'https://api.openweathermap.org/data/2.5/weather?appid=c4140dc62db74678e058b647104492a1';
 let urltime = 'http://worldtimeapi.org/api/timezone/Europe/London';
-let url_base = 'city.list.json';
+let url_base = 'js/city.list.json';
 let box_status;
 let _select_town = document.getElementById('select_town_s');
 let _select_country = document.getElementById('select_country');
