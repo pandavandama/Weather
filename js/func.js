@@ -268,11 +268,7 @@ function time() {
     town_date_info.innerHTML = `${__hours}:${__minutes}:${__seconds}`;
     return requestAnimationFrame(time)
 }
-function font_adaptive() {
-    info.style.fontSize = window.innerHeight / 20 + 'px';
 
-    return requestAnimationFrame(font_adaptive);
-}
 function show_weather(){
     document.querySelector('.container').style.bottom = 0;
     setTimeout(() => {document.getElementById('serious').style.top = 0;}, 1000); 

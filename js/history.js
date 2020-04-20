@@ -7,13 +7,13 @@ function show(){
     console.log(pageYOffset);
     if(pageYOffset<1300)
     {
-        change_text.innerHTML = 'Как же возникла наша компания?'
+        change_text.innerHTML = 'Погода бывает разной...'
         opts.backgroudColor = "rgb(231, 223, 221)";
 
     }
     if(pageYOffset>1300)
     {   
-        change_text.innerHTML = 'Это очень темная история...'
+        change_text.innerHTML = 'И темной...'
         change_text.style.color = 'white';
         opts.backgroudColor = "black";
     }
