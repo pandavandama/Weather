@@ -56,7 +56,7 @@ a{
 
 .selects{
     outline: none;
-    background: rgba(231, 223, 221, 0.8);
+    background: none;
     margin: 20px 0 0 0;
     text-transform: uppercase;
     width: 100%;
@@ -65,12 +65,13 @@ a{
     font-size: 20px;
     color: black;
     text-align-last: center;
-    color: white;
+    
     -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
    
 }
+
 option{
     text-align-last: center;
     text-align: center;
@@ -127,6 +128,7 @@ option{
     margin:  auto;
     width: fit-content;
     height: fit-content;
+    color: white;
 }
 .info_elem{
     width: fit-content;

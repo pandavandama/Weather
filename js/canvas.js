@@ -14,8 +14,8 @@ let
         defaultRadius:2,
         addedRadius:2,
 
-        defaultSpeed: 1,
-        addedSpeed: 2,
+        defaultSpeed: 2,
+        addedSpeed: 3,
         
         communicationRadius: 200,
     },
@@ -42,13 +42,13 @@ let
             if(this.x >= w || this.x <= 0){
                 this.d.x *= -1;
             }
-            if(this.y >= h || this.x <=0){
+            if(this.y >= h || this.y <=0){
                 this.d.y *= -1;
             }
             this.x > w ? this.x = w : this.x;
             this.y > h ? this.y = h : this.y;
             this.x < 0 ? this.x = 0 : this.x;
-            this.y < 0 ? this.x = 0 : this.y;
+            this.y < 0 ? this.y = 0 : this.y;
         };
         this.draw = function(){
             ctx.beginPath();

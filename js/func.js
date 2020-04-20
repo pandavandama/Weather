@@ -9,7 +9,7 @@ function state_scan() {
 }
 
 function town_scan() {
-    console.log('aaa');
+    
     if (_town_letters.value.length > 1)
         axios.get(url_base)
             .then(function (response) {
@@ -221,6 +221,7 @@ function set_weather() {
     axios.get('https://api.openweathermap.org/data/2.5/weather?id=' + id + '&appid=c4140dc62db74678e058b647104492a1')
         .then(function (response) {
             show_weather_by_id(response, id);
+            
 
         }
         );
@@ -228,7 +229,7 @@ function set_weather() {
 
 function show_weather_by_id(data, id) {
     int = 0;
-    console.log(data);
+    
 
     town_temp_info.innerHTML = parseInt(data.data.main.temp - 273.15) + " °C";
     town_visual_info.innerHTML = data.data.weather[0].main;
@@ -260,7 +261,11 @@ function time() {
     let __hours = __time.getHours();
     let __minutes = __time.getMinutes();
     let __seconds = __time.getSeconds();
-
+    if(__hours>21 || __hours<6 && w!=undefined){
+        
+        opts.backgroudColor = "black";
+    }
+    else opts.backgroudColor = "rgb(231, 223, 221)";
      
     __hours = String(__hours).length != 2 ? __hours = '0' + __hours : __hours = __hours;
     __minutes = String(__minutes).length != 2 ? __minutes = '0' + __minutes : __minutes = __minutes;

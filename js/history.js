@@ -4,16 +4,16 @@ let rel_block_id1 = document.getElementById('rel_block_id1');
 let monitor = requestAnimationFrame(show);
 
 function show(){
-    console.log(pageYOffset);
+    
     if(pageYOffset<1300)
     {
-        change_text.innerHTML = 'Погода бывает разной...'
+        change_text.innerHTML = 'Время суток бывает разным...'
         opts.backgroudColor = "rgb(231, 223, 221)";
 
     }
     if(pageYOffset>1300)
     {   
-        change_text.innerHTML = 'И темной...'
+        change_text.innerHTML = 'И темным...'
         change_text.style.color = 'white';
         opts.backgroudColor = "black";
     }
